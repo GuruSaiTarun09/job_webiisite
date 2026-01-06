@@ -1,0 +1,41 @@
+<header class="header">
+    <!-- Logo -->
+    <img src="assets/logo.png" alt="Logo" class="logo">
+
+    <!-- Menu buttons -->
+    <nav class="menu">
+        <button mat-button [matMenuTriggerFor]="homeMenu">Home</button>
+        <button mat-button [matMenuTriggerFor]="jobsMenu">Find Jobs</button>
+        <button mat-button [matMenuTriggerFor]="aboutMenu">About</button>
+        <button mat-button [matMenuTriggerFor]="pagesMenu">Pages</button>
+        <button mat-button [matMenuTriggerFor]="contactMenu">Contact</button>
+
+        <button mat-raised-button color="warn">Register</button>
+        <button mat-stroked-button color="warn">Login</button>
+    </nav>
+</header>
+
+<!-- Home -->
+<mat-menu #homeMenu="matMenu" yPosition="below">
+</mat-menu>
+
+<!-- Jobs -->
+<mat-menu #jobsMenu="matMenu" yPosition="below">
+</mat-menu>
+
+<!-- About -->
+<mat-menu #aboutMenu="matMenu" yPosition="below">
+
+</mat-menu>
+
+<!-- Pages -->
+<mat-menu #pagesMenu="matMenu" yPosition="below">
+    <button mat-menu-item>Blog</button>
+    <button mat-menu-item>Blog Details</button>
+    <button mat-menu-item>Elements</button>
+    <button mat-menu-item>Job Details</button>
+
+</mat-menu>
+<!-- Contact -->
+<mat-menu #contactMenu="matMenu" yPosition="below">
+</mat-menu>

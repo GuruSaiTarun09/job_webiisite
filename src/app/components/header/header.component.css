@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content:space-evenly;
+  background-color: rgb(235, 235, 235);
+  padding: 10px 20px;
+}
+
+.logo {
+  height: 50px;
+}
+
+.menu button {
+  color: black;
+  margin-left: 10px;
+}
