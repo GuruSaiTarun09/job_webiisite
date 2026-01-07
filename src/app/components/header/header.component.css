@@ -7,9 +7,10 @@
 
 /* ================= HEADER ================= */
 .header {
-  position: sticky;      /* ✅ STICKY */
-  top: 0;                /* ✅ REQUIRED */
-  z-index: 1000;         /* ✅ REQUIRED */
+  position: fixed;     
+  top: 0;            
+  z-index: 1000;  
+  width: 100%;       
 
   display: flex;
   align-items: center;
@@ -40,7 +41,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   padding: 90px 64px;
   background: #eef1ff;
   min-height: calc(100vh - 72px); /* header height */
@@ -124,3 +124,94 @@
     gap: 12px;
   }
 }
+/* ================= TOP CATEGORIES ================= */
+.categories-wrapper {
+  padding: 90px 64px;
+  background: #ffffff;
+}
+
+.categories-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.small-title {
+  color: #ff2c7d;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.categories-header h2 {
+  font-size: 44px;
+  font-weight: 800;
+  color: #1f2b4f;
+  margin-top: 12px;
+}
+
+/* GRID */
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* CARD */
+.category-card {
+  background: #ffffff;
+  border: 1px solid #e6fff6;
+  padding: 50px 20px;
+  text-align: center;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-card img {
+  width: 60px;
+  margin-bottom: 25px;
+}
+
+.category-card h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2b4f;
+  margin-bottom: 10px;
+}
+
+.category-card .count {
+  color: #ff2c7d;
+  font-size: 15px;
+}
+
+/* ACTIVE / HOVER */
+.category-card:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  transform: translateY(-10px);
+}
+
+.category-card.active h4 {
+  color: #ff2c7d;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .categories-wrapper {
+    padding: 60px 20px;
+  }
+
+  .categories-header h2 {
+    font-size: 32px;
+  }
+
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
